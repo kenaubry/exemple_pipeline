@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages {
+    stages { 
         stage('Build') {
             steps {
                 // Étapes de construction du code source
