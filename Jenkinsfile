@@ -13,10 +13,16 @@ pipeline {
                 sh 'make test'
             }
         }
+        stage('Delivery') {
+            steps {
+                // Livraison du code; construction de l'image
+                sh 'docker build -t my_app .'
+            }
+        }
         stage('Deploy') {
             steps {
-                // Étapes de déploiement du code
-                sh 'make deploy'
+                // Déploiement du code; ici, on lance juste le conteneur localement
+                sh 'docker run'
             }
         }
     }
