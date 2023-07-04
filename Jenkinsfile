@@ -23,6 +23,8 @@ pipeline {
             steps {
                 // Déploiement du code; ici, on lance juste le conteneur localement
                 sh 'docker run my_app'
+                echo "Voici le conteneur sur lequel tourne l'application :"
+                sh 'docker ps'
                 // sh 'make deploy'
             }
         }
