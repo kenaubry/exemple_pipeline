@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Déploiement du code; ici, on lance juste le conteneur localement
-                sh 'docker run'
+                sh 'docker run my_app'
             }
         }
     }
